@@ -5,13 +5,14 @@
 
 # Install build dependencies
 apt-get update
-apt-get -y install build-essential libssl-dev libperl-dev pkg-config
+apt-get -y install build-essential libssl-dev libperl-dev pkg-config wget
 
 # Build ZNC
 cd /tmp
+wget http://znc.in/releases/archive/znc-1.4.tar.gz
 tar -xzvf znc*.*gz
 cd znc*
-./configure
+./configure --prefix=/usr/local
 make
 make install
 

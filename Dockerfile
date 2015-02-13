@@ -3,10 +3,10 @@
 # VERSION   0.0.2
 
 FROM ubuntu:14.04.1
-MAINTAINER Dariel Dato-on <oddrationale@gmail.com>
+MAINTAINER Ian <ianand0204@gmail.coim>
 
 # Compile ZNC from source
-ADD http://znc.in/releases/znc-1.4.tar.gz /tmp/
+#ADD http://znc.in/releases/znc-1.4.tar.gz /tmp/
 ADD build.sh /tmp/
 RUN /tmp/build.sh
 
