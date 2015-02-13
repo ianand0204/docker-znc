@@ -34,7 +34,8 @@ Here's an example unit file for `docker-znc.service`:
     Requires=docker.service
     
     [Service]
-    ExecStart=/usr/bin/docker run -p 6667:6667 --rm --volumes-from znc_makeconf oddrationale/docker-znc
+    ExecStart=/usr/bin/docker run --name znc -p 8889:8889 --rm --volumes-from znc_makeconf ianand0204/znc
+    ExecStop=/usr/bin/docker stop znc
     
     [Install]
     WantedBy=multi-user.target
